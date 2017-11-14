@@ -23,17 +23,12 @@ function managePerson(arr, rowSeats) {
 	let row = 0
 	debugger
 	for(let i=0; i<arr.length; i++) {
-		// seats[row].push(arr[i]);
-		// if(row <= 2) {
-		// 	row++
-		// } else {
-		// 	row == 0
-		// }
-		seats[row].push(arr[i])
-        row++
-        if(row >= seats.length ){
-            row = 0
-        }
+		seats[row].push(arr[i]);
+		if(row < 2) {
+			row++
+		} else {
+			row = 0;
+		}
 	}
 	printSeats(seats)
 }
